@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
-public class StartController {
 
-	@RequestMapping(value = "/hello", produces = { "application/JSON" })
+public class AwesomeController {
+
+	@RequestMapping(value = "/awesome", produces = { "application/JSON" })
 	@ResponseBody
-    public String getGreeting() {
-        return " Heyyo, awesome! :) ";
+    public String sayAwesome() {
+        return "{ \"message\" :" + " \"Heyyo, awesome! :) \" }";
     }
 }
